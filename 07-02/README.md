@@ -74,7 +74,7 @@ core_fraction = 5 - задает уровень производительнос
 
 4. Проверьте terraform plan (изменений быть не должно). 
 
-![](images/task2_terplan.jpg)
+![](images/task2_terplan.png)
 
 ### Задание 3
 
