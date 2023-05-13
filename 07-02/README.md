@@ -99,6 +99,7 @@ core_fraction = 5 - задает уровень производительнос
 2. Примените изменения.
 
 ![](images/task4_output.png)
+
 3. В качестве решения приложите вывод значений ip-адресов команды ```terraform output```
 
 ![](images/task4_output1.png)
