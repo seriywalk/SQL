@@ -99,24 +99,61 @@ core_fraction = 5 - задает уровень производительнос
 2. Примените изменения.
 
 ![](images/task4_output.png)
+3. В качестве решения приложите вывод значений ip-адресов команды ```terraform output```
 
-В качестве решения приложите вывод значений ip-адресов команды ```terraform output```
-
+![](images/task4_output1.png)
 
 ### Задание 5
 
 1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
-2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local переменные.
-3. Примените изменения.
 
+[locals.tf ](src/locals.tf)
+
+2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local переменные.
+
+[variables.tf](src/variables.tf)
+
+4. Примените изменения.
+
+![](images/task5_terapply.png)
 
 ### Задание 6
 
 1. Вместо использования 3-х переменных  ".._cores",".._memory",".._core_fraction" в блоке  resources {...}, объедените их в переменные типа **map** с именами "vm_web_resources" и "vm_db_resources".
 2. Так же поступите с блоком **metadata {serial-port-enable, ssh-keys}**, эта переменная должна быть общая для всех ваших ВМ.
+
+Создал файл myssh.tf со значением ssh-key, добавил его в .gitignore
+
+![](images/task6_ssh.png)
+![](images/task6_ignore.png)
+
+В файле vms_platform.tf добавил переменные
+
+![](images/task6_vm_resources.png)
+
+В файле main.tf
+ 
+![](images/task6_maintfvmweb.png)
+![](images/task6_maintfvmdb.png)
+
 3. Найдите и удалите все более не используемые переменные проекта.
+
+В файле variables.tf 
+
+![](images/task6_vardelssh.png)
+
+В файле vms_platform.tf 
+
+![](images/task6_del_vm_db.png)
+![](images/task6_del_vm_web.png)
+
+В файле personal.auto.tfvars удалил значение ssh-ключа
+
+![](images/task6_pers.png)
+
 4. Проверьте terraform plan (изменений быть не должно).
 
+![](images/task6_terplan.png)
 ------
 
 ## Дополнительные задания (со звездочкой*)
