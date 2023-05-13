@@ -80,11 +80,11 @@ core_fraction = 5 - задает уровень производительнос
 
 1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
 
-Создал файл [vms_platform.tf](07-02/src/vms_platform.tf)
+Создал файл [vms_platform.tf](src/vms_platform.tf)
 
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ(в файле main.tf): **"netology-develop-platform-db"** ,  cores  = 2, memory = 2, core_fraction = 20. Объявите ее переменные с префиксом **vm_db_** в том же файле('vms_platform.tf').
 
-Изменил [main.tf](07-02/src/main.tf)
+Изменил [main.tf](src/main.tf)
 
 3. Примените изменения.
 
